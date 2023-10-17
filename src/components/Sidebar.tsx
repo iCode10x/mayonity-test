@@ -6,8 +6,8 @@ const Sidebar = ({
   showClose,
   setShowSidebar,
 }: {
-  showClose: boolean;
-  setShowSidebar: Dispatch<SetStateAction<boolean>>;
+  showClose?: boolean;
+  setShowSidebar?: Dispatch<SetStateAction<boolean>>;
 }) => {
   const [settingsOpen, setSettingsOpen] = useState(false);
   return (
@@ -17,7 +17,9 @@ const Sidebar = ({
           src="/cross.png"
           alt="cross"
           className="w-[16px] h-[16px] absolute top-7 right-4"
-          onClick={() => setShowSidebar(false)}
+          onClick={() => {
+            setShowSidebar && setShowSidebar(false);
+          }}
         />
       )}
       <h1 className="font-poppins font-bold text-[28px] text-[#111827]">
