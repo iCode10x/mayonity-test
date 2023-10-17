@@ -54,7 +54,9 @@ const Sidebar = ({
                 className="flex items-center gap-2 cursor-pointer"
               >
                 <img src={item.icon} alt="icon" className="w-[20px] h-[20px]" />
-                <span className="text-[#787878] text-[15px]">{item.label}</span>
+                <span className="text-[#787878] text-[12px] sm:text-[15px]">
+                  {item.label}
+                </span>
               </div>
             ))}
           </div>
